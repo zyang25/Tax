@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="dominos" class="zheng.donimos2.Dominos">
+	<constructor-arg index = "0" ref = "pizza"></constructor-arg>
+	</bean>
+	
+	<bean id="pizza" class="zheng.donimos2.Pizza">
+		<property name = "first_name">
+			<value>tomato</value>
+		</property>
+		<property name = "last_name">
+			<value>7</value>
+		</property>
+	</bean>
+
+</beans>
