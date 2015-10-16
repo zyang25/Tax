@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tax</title>
+</head>
+<body>
+<form action="xml_parser.php" method="post">
+	First name:<input type="text" name="first_name"><br/>
+	Last name:<input type="text" name="last_name"><br/>
+	Identify Number:<input type="text" name="id"><br/>
+	Present home address1: <input type="text" name="address1"><br/>
+	Present home address2: <input type="text" name="address2"><br/>
+	Foreign Country Name:<input type="text" name="fcn"><br/>
+	ForeignProvince:<input type="text" name="fp"><br/>
+	foreignPostCode:<input type="text" name="fpc"><br/>
+
+	<input type="radio" name="marriage" value="single">Single<br>
+	<input type="radio" name="marriage" value="married">Married<br>
+	Wages:<input type="number" name="line_3" value="" min="0"><br>
+	Taxable refunds, credits, or offsets of state and local income taxes:
+	<input type="number" name="line_4" value="" min="0"><br>
+	Scholarship and fellowship grants:<input type="number" name="line_8" value=""  min="0"><br>
+	Total income exempt by a treaty:<input type="number" name="line_9" value=""  min="0"><br>
+	Scholarship and fellowship grants excluded:<input type="number" value=""  name="scholar_excluded" min="0"><br>
+	Student loan interest deduction:<input type="number" name="loan_interest_deduction" value=""  min="0"><br>
+	<input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>
