@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,24 +19,30 @@ import com.itextpdf.text.DocumentException;
 
 @Controller
 public class PersonController {
-    
-    @SuppressWarnings("resource")
+	
+	
 	@RequestMapping(value="/pb", method=RequestMethod.GET)
     @ResponseStatus(value = HttpStatus.OK)
 	public void CreatePerson() throws IOException, DocumentException {
-    	ApplicationContext ac = new ClassPathXmlApplicationContext("newbean.xml");
-    	personalInformation pi = (personalInformation) ac.getBean("personalInfo");
+		ApplicationContext ac =
+			    new FileSystemXmlApplicationContext(
+			        "newbean.xml"
+			    );		
+		personalInformation pi = (personalInformation) ac.getBean("personalInfo");
     	PdfNameReader.nameReader();
         TextFields example = new TextFields(0);
-        //example.createPdf(RESULT1);
         example.manipulatePdf(TextFields.RESULT1, TextFields.RESULT2,pi);
+       
     }
     
     @RequestMapping(value = "/test",method = RequestMethod.POST,consumes = "application/xml")
     public ResponseEntity<String> processXml(@RequestBody String requestBody){   	    
     		try {
     			stringToDom(requestBody);
-				ApplicationContext ac = new ClassPathXmlApplicationContext("newbean.xml");				
+    			ApplicationContext ac =
+    				    new FileSystemXmlApplicationContext(
+    				        "newbean.xml"
+    				    );	
 		    	personalInformation pi = (personalInformation) ac.getBean("personalInfo");
 		    	System.out.println(pi.getFirstName());
 		    	PdfNameReader.nameReader();
@@ -54,7 +61,7 @@ public class PersonController {
     
     public static void stringToDom(String xmlSource) 
             throws IOException {
-        java.io.FileWriter fw = new java.io.FileWriter("src/main/java/newbean.xml");
+        java.io.FileWriter fw = new java.io.FileWriter("newbean.xml");
         fw.write(xmlSource);
         fw.close();
     }
