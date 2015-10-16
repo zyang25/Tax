@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Implementation-Title: gs-rest-service
+Implementation-Title: gs-handling-form-submission
 Implementation-Version: 0.1.0
 Built-By: Charles
 Implementation-Vendor-Id: org.springframework

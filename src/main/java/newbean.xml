@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="personalInfo" class="com.charles.app.personalInformation"><property name="firstName"><value>Zihao</value></property><property name="lastName"><value>Jason</value></property><property name="idNumber"><value>10392036</value></property><property name="presentHomeAdd"><value>stevens</value></property><property name="presentHomeAdd2"><value/></property><property name="foreignCountryName"><value>China</value></property><property name="foreignProvince"><value>Guangdong</value></property><property name="foreignPostCode"><value>10006</value></property></bean></beans>
