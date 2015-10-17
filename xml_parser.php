@@ -55,7 +55,7 @@ function xml(){
 function postXML(){
 			$xmldata = xml();
 			echo $xmldata;
-			$ch = curl_init('http://localhost:8181/test');
+			$ch = curl_init('http://localhost:8080/test');
 			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 			curl_setopt($ch, CURLOPT_POST, 1);
