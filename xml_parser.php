@@ -54,7 +54,6 @@ function xml(){
 }
 function postXML(){
 			$xmldata = xml();
-			echo $xmldata;
 			$ch = curl_init('http://localhost:8080/test');
 			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
@@ -65,7 +64,8 @@ function postXML(){
 			$output = curl_exec($ch);
 			curl_close($ch);
 }
-//if(isset($_POST['first_name'],$_POST['last_name'],$_POST['id'],$_POST['address'],$_POST['city'],$_POST['state'])){
-	postXML();
-//}
+
+postXML();
+
+
 ?>
