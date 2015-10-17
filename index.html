@@ -1,31 +1,103 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Tax</title>
-</head>
-<body>
-<form action="xml_parser.php" method="post">
-	First name:<input type="text" name="first_name"><br/>
-	Last name:<input type="text" name="last_name"><br/>
-	Identify Number:<input type="text" name="id"><br/>
-	Present home address1: <input type="text" name="address1"><br/>
-	Present home address2: <input type="text" name="address2"><br/>
-	Foreign Country Name:<input type="text" name="fcn"><br/>
-	ForeignProvince:<input type="text" name="fp"><br/>
-	foreignPostCode:<input type="text" name="fpc"><br/>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Tax</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-	<input type="radio" name="marriage" value="single">Single<br>
-	<input type="radio" name="marriage" value="married">Married<br>
-	Wages:<input type="number" name="line_3" value="" min="0"><br>
-	Taxable refunds, credits, or offsets of state and local income taxes:
-	<input type="number" name="line_4" value="" min="0"><br>
-	Scholarship and fellowship grants:<input type="number" name="line_8" value=""  min="0"><br>
-	Total income exempt by a treaty:<input type="number" name="line_9" value=""  min="0"><br>
-	Scholarship and fellowship grants excluded:<input type="number" value=""  name="scholar_excluded" min="0"><br>
-	Student loan interest deduction:<input type="number" name="loan_interest_deduction" value=""  min="0"><br>
-	<input type="submit" value="Submit">
+  </head>
+  <body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+<form class="form-horizontal" action="xml_parser.php" method="POST">
+
+<fieldset>
+
+<!-- Form Name -->
+<legend align="center">Personal Information</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">First Name:</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="first_name" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Last Name:</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="last_name" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Identify Number:</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="id" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Present Home Address1:</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="address1" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Present Home Address2:</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="address2" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Foreign Country Name:</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="fcn" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Foreign Province:</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="fp" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Foreign Post Code:</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="fpc" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+<label class="col-md-4 control-label" for="textinput"></label>
+  <div class="col-md-5">
+    <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+  </div>
+</div>
+
+</fieldset>
 </form>
 
 
-</body>
+
+  </body>
 </html>
