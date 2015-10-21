@@ -64,7 +64,9 @@ function postXML(){
 			$output = curl_exec($ch);
 			curl_close($ch);
 }
-
+function downloadPDF(){
+	
+}
 postXML();
 
 
