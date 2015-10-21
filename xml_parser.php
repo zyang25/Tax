@@ -48,6 +48,61 @@ function xml(){
 	$property7->addAttribute('name','foreignPostCode');
 	$property7->addChild('value',$_POST['fpc']);
 
+	//Bean2
+	$bean2 = $xml->addChild('bean');
+	$bean2->addAttribute('id','tax');
+	$bean2->addAttribute('class','zheng.tax.Blanks');
+
+	//Property node
+	$property7 = $bean2->addChild('property');
+	$property7->addAttribute('name','blank_1');
+	$property7->addChild('value',$_POST['b1']);
+
+	//Property node
+	$property7 = $bean2->addChild('property');
+	$property7->addAttribute('name','blank_2');
+	$property7->addChild('value',$_POST['b2']);
+
+	//Property node
+	$property7 = $bean2->addChild('property');
+	$property7->addAttribute('name','blank_3');
+	$property7->addChild('value',$_POST['b3']);
+
+	//Property node
+	$property7 = $bean2->addChild('property');
+	$property7->addAttribute('name','blank_4');
+	$property7->addChild('value',$_POST['b4']);
+
+	//Property node
+	$property7 = $bean2->addChild('property');
+	$property7->addAttribute('name','blank_5');
+	$property7->addChild('value',$_POST['b5']);
+
+	//Property node
+	$property7 = $bean2->addChild('property');
+	$property7->addAttribute('name','blank_11');
+	$property7->addChild('value',$_POST['b11']);
+
+	//Property node
+	$property7 = $bean2->addChild('property');
+	$property7->addAttribute('name','blank_15');
+	$property7->addChild('value',$_POST['b15']);
+
+	//Property node
+	$property7 = $bean2->addChild('property');
+	$property7->addAttribute('name','blank_18a');
+	$property7->addChild('value',$_POST['b18a']);
+
+	//Property node
+	$property7 = $bean2->addChild('property');
+	$property7->addAttribute('name','blank_18b');
+	$property7->addChild('value',$_POST['b18b']);
+
+	//Property node
+	$property7 = $bean2->addChild('property');
+	$property7->addAttribute('name','blank_19');
+	$property7->addChild('value',$_POST['b19']);
+
 	fwrite($GLOBALS['myfile'], $xml->saveXML());
 	
 	return $xml->saveXML();
