@@ -62,57 +62,94 @@ function xml(){
 	//Bean2
 	$bean2 = $xml->addChild('bean');
 	$bean2->addAttribute('id','tax');
-	$bean2->addAttribute('class','zheng.tax.Blanks');
+	$bean2->addAttribute('class','com.charles.app.Blanks');
 
 	//Property node
-	$property7 = $bean2->addChild('property');
-	$property7->addAttribute('name','blank_1');
-	$property7->addChild('value',$_POST['b1']);
+	$property8 = $bean2->addChild('property');
+	$property8->addAttribute('name','blank_1');
+	$property8->addChild('value',$_POST['b1']);
 
 	//Property node
-	$property7 = $bean2->addChild('property');
-	$property7->addAttribute('name','blank_2');
-	$property7->addChild('value',$_POST['b2']);
+	$property9 = $bean2->addChild('property');
+	$property9->addAttribute('name','blank_2');
+	$property9->addChild('value',$_POST['b2']);
 
 	//Property node
-	$property7 = $bean2->addChild('property');
-	$property7->addAttribute('name','blank_3');
-	$property7->addChild('value',$_POST['b3']);
+	$property10 = $bean2->addChild('property');
+	$property10->addAttribute('name','blank_3');
+	$property10->addChild('value',$_POST['b3']);
 
 	//Property node
-	$property7 = $bean2->addChild('property');
-	$property7->addAttribute('name','blank_4');
-	$property7->addChild('value',$_POST['b4']);
+	$property11 = $bean2->addChild('property');
+	$property11->addAttribute('name','blank_4');
+	$property11->addChild('value',$_POST['b4']);
 
 	//Property node
-	$property7 = $bean2->addChild('property');
-	$property7->addAttribute('name','blank_5');
-	$property7->addChild('value',$_POST['b5']);
+	$property12 = $bean2->addChild('property');
+	$property12->addAttribute('name','blank_5');
+	$property12->addChild('value',$_POST['b5']);
 
 	//Property node
-	$property7 = $bean2->addChild('property');
-	$property7->addAttribute('name','blank_11');
-	$property7->addChild('value',$_POST['b11']);
+	$property13 = $bean2->addChild('property');
+	$property13->addAttribute('name','blank_11');
+	$property13->addChild('value',$_POST['b11']);
 
 	//Property node
-	$property7 = $bean2->addChild('property');
-	$property7->addAttribute('name','blank_15');
-	$property7->addChild('value',$_POST['b15']);
+	$property14 = $bean2->addChild('property');
+	$property14->addAttribute('name','blank_15');
+	$property14->addChild('value',$_POST['b15']);
 
 	//Property node
-	$property7 = $bean2->addChild('property');
-	$property7->addAttribute('name','blank_18a');
-	$property7->addChild('value',$_POST['b18a']);
+	$property15 = $bean2->addChild('property');
+	$property15->addAttribute('name','blank_18a');
+	$property15->addChild('value',$_POST['b18a']);
 
 	//Property node
-	$property7 = $bean2->addChild('property');
-	$property7->addAttribute('name','blank_18b');
-	$property7->addChild('value',$_POST['b18b']);
+	$property16 = $bean2->addChild('property');
+	$property16->addAttribute('name','blank_18b');
+	$property16->addChild('value',$_POST['b18b']);
 
 	//Property node
-	$property7 = $bean2->addChild('property');
-	$property7->addAttribute('name','blank_19');
-	$property7->addChild('value',$_POST['b19']);
+	$property17 = $bean2->addChild('property');
+	$property17->addAttribute('name','blank_19');
+	$property17->addChild('value',$_POST['b19']);
+
+	//Property node
+	$property18 = $bean2->addChild('property');
+	$property18->addAttribute('name','blank_23a');
+	$property18->addChild('value',$_POST['b23a']);
+
+	//Property node
+	$property19 = $bean2->addChild('property');
+	$property19->addAttribute('name','blank_23b');
+	$property19->addChild('value',$_POST['b23b']);
+
+	//Property node
+	$property20 = $bean2->addChild('property');
+	$property20->addAttribute('name','blank_23c1');
+	$property20->addChild('value',$_POST['b23c1']);
+
+	//Property node
+	$property21 = $bean2->addChild('property');
+	$property21->addAttribute('name','blank_23c2');
+	$property21->addChild('value',$_POST['b23c2']);
+
+	//Property node
+	$property22 = $bean2->addChild('property');
+	$property22->addAttribute('name','blank_23d');
+	$property22->addChild('value',$_POST['b23d']);
+
+	//Property node
+	$property23 = $bean2->addChild('property');
+	$property23->addAttribute('name','blank_23e');
+	$property23->addChild('value',$_POST['b23e']);
+
+	//Property node
+	$property23 = $bean2->addChild('property');
+	$property23->addAttribute('name','blank_24');
+	$property23->addChild('value',$_POST['b24']);
+
+
 
 	fwrite($GLOBALS['myfile'], $xml->saveXML());
 	
