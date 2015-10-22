@@ -23,12 +23,13 @@ public class TextFields implements PdfPCellEvent {
     public static final String RESULT1 = "1040.pdf";//原始文件
     public static final String RESULT2 = "1040result.pdf";//目标文件
     protected int tf;
+    double b14;
 
     public TextFields(int tf) {
         this.tf = tf;
     }
 
-    public void manipulatePdf(String src, String dest, personalInformation pi) throws IOException, DocumentException {
+    public void manipulatePdf(String src, String dest, personalInformation pi, Blanks b) throws IOException, DocumentException {
         PdfReader reader = new PdfReader(src);
         PdfStamper stamper = new PdfStamper(reader, new FileOutputStream(dest));
         AcroFields form = stamper.getAcroFields();
@@ -40,6 +41,51 @@ public class TextFields implements PdfPCellEvent {
         form.setField(PdfNameReader.al.get(5), pi.getForeignCountryName());
         form.setField(PdfNameReader.al.get(6), pi.getForeignProvince());
         form.setField(PdfNameReader.al.get(7), pi.getForeignPostCode());
+       // if(Integer.parseInt(b.getBlank_1())!=0)
+        	form.setField(PdfNameReader.al.get(8), b.getBlank_1());
+        //if(Integer.parseInt(b.getBlank_2())!=0)
+        	form.setField(PdfNameReader.al.get(9), b.getBlank_2());
+        form.setField(PdfNameReader.al.get(10), b.getBlank_3());
+        form.setField(PdfNameReader.al.get(12), b.getBlank_4());
+        form.setField(PdfNameReader.al.get(14), b.getBlank_5());
+        form.setField(PdfNameReader.al.get(16), "5000");
+        form.setField(PdfNameReader.al.get(17), "treaty C");
+        double b7 = Double.parseDouble(b.getBlank_3())+Double.parseDouble(b.getBlank_4())+Double.parseDouble(b.getBlank_5());
+        form.setField(PdfNameReader.al.get(18), ""+ b7);
+        form.setField(PdfNameReader.al.get(20), "0");
+        form.setField(PdfNameReader.al.get(22), "0");
+        form.setField(PdfNameReader.al.get(24), ""+b7);
+        form.setField(PdfNameReader.al.get(26), b.getBlank_11());
+        form.setField(PdfNameReader.al.get(28), ""+(b7 - Double.parseDouble(b.getBlank_11())));
+        form.setField(PdfNameReader.al.get(30), "3950");
+        if((b7 - Integer.parseInt(b.getBlank_11()))>3950){
+        	b14 = b7 - Double.parseDouble(b.getBlank_11())-3950;
+        	form.setField(PdfNameReader.al.get(32), (b7 - Double.parseDouble(b.getBlank_11())-3950)+"");
+        }
+        else
+        	form.setField(PdfNameReader.al.get(32), "0");
+        String b15 = CalculateTax.calculateTax(b14);
+        form.setField(PdfNameReader.al.get(34), b15);
+        form.setField(PdfNameReader.al.get(38), "0");
+        form.setField(PdfNameReader.al.get(40), b15);
+        form.setField(PdfNameReader.al.get(42), b.getBlank_18a());
+        form.setField(PdfNameReader.al.get(44), b.getBlank_18b());
+        form.setField(PdfNameReader.al.get(46), b.getBlank_19());
+        form.setField(PdfNameReader.al.get(48), "0");
+        double b21 = Double.parseDouble(b.getBlank_18a()) + Double.parseDouble(b.getBlank_18b()) + Double.parseDouble(b.getBlank_19());
+        form.setField(PdfNameReader.al.get(50), ""+b21);
+        if(b21>Double.parseDouble(b15))	
+        	form.setField(PdfNameReader.al.get(52), ""+(b21-Double.parseDouble(b15)));
+        else
+        	form.setField(PdfNameReader.al.get(52), "0");
+        form.setField(PdfNameReader.al.get(55), b.getBlank_23a());
+        form.setField(PdfNameReader.al.get(57), b.getBlank_23b());
+        form.setField(PdfNameReader.al.get(58), b.getBlank_23c1());
+        form.setField(PdfNameReader.al.get(59), b.getBlank_23c2());
+        form.setField(PdfNameReader.al.get(60), b.getBlank_23d());
+        form.setField(PdfNameReader.al.get(61), b.getBlank_23e());
+        form.setField(PdfNameReader.al.get(63), b.getBlank_24());
+        form.setField(PdfNameReader.al.get(65), ""+(Double.parseDouble(b15)-b21));
         stamper.close();
         reader.close();
     }
