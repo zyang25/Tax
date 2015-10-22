@@ -95,9 +95,9 @@ function xml(){
 	$property13->addChild('value',$_POST['b11']);
 
 	//Property node
-	$property14 = $bean2->addChild('property');
-	$property14->addAttribute('name','blank_15');
-	$property14->addChild('value',$_POST['b15']);
+	// $property14 = $bean2->addChild('property');
+	// $property14->addAttribute('name','blank_15');
+	// $property14->addChild('value',$_POST['b15']);
 
 	//Property node
 	$property15 = $bean2->addChild('property');
