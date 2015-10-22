@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="refresh" content="0;URL=index.html" />
+	<meta http-equiv="refresh" content="0;URL=/home/ec2-user/Tax/1040result.pdf" />
 	<title>Processing</title>
 </head>
 <body>
