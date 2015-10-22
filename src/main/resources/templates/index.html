@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Tax</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<form action="#" th:action="@{/pb}" th:object="${person}" method="post">
+	<p>First name:<input type="text" th:field="*{firstName}"></p><br/>
+	
+	<!-- Last name:<input type="text" name="last_name"><br/>
+	Identify Number:<input type="text" name="id"><br/>
+	Present home address: <input type="text" name="address"><br/>
+	City:<input type="text" name="city"><br/>
+	State:<input type="text" name="state"><br/>
+
+	<input type="radio" name="marriage" value="single">Single<br>
+	<input type="radio" name="marriage" value="married">Married<br>
+	Wages:<input type="number" name="line_3" value="" min="0"><br>
+	Taxable refunds, credits, or offsets of state and local income taxes:
+	<input type="number" name="line_4" value="" min="0"><br>
+	Scholarship and fellowship grants:<input type="number" name="line_8" value=""  min="0"><br>
+	Total income exempt by a treaty:<input type="number" name="line_9" value=""  min="0"><br>
+	Scholarship and fellowship grants excluded:<input type="number" value=""  name="scholar_excluded" min="0"><br>
+	Student loan interest deduction:<input type="number" name="loan_interest_deduction" value=""  min="0"><br> -->
+	<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
