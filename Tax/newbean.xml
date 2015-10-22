@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="personalInfo"
+		class="com.charles.app.personalInformation">
+		<property name = "firstName">
+			<value>1</value>
+		</property>
+		<property name = "lastName">
+			<value>Zhao</value>
+		</property>
+		<property name = "idNumber">
+			<value>123456</value>
+		</property>
+		<property name = "presentHomeAdd">
+			<value>123 Park Ave</value>
+		</property>
+		<property name = "presentHomeAdd2">
+			<value>Hoboken, NJ</value>
+		</property>
+		<property name = "foreignCountryName">
+			<value>China</value>
+		</property>
+		<property name = "foreignProvince">
+			<value>Beijing</value>
+		</property>
+		<property name = "foreignPostCode">
+			<value>10000</value>
+		</property>
+		</bean>
+	<bean id="tax" class="com.charles.app.Blanks">
+		<property name = "blank_1">
+			<value>0</value>
+		</property>
+		<property name = "blank_2">
+			<value>2</value>
+		</property>
+		<property name = "blank_3">
+			<value>10000</value>
+		</property>
+		<property name = "blank_4">
+			<value>100</value>
+		</property>
+		<property name = "blank_5">
+			<value>500</value>
+		</property>
+		<property name = "blank_11">
+			<value>3000</value>
+		</property>
+		<property name = "blank_15">
+			<value>40000</value>
+		</property>
+		<property name = "blank_18a">
+			<value>1500</value>
+		</property>
+		<property name = "blank_18b">
+			<value>1000</value>
+		</property>
+		<property name = "blank_19">
+			<value>0</value>
+		</property>
+		<property name = "blank_23a">
+			<value>0</value>
+		</property>
+		<property name = "blank_23b">
+			<value>123456789</value>
+		</property>
+		<property name = "blank_23c1">
+			<value>1</value>
+		</property>
+		<property name = "blank_23c2">
+			<value>0</value>
+		</property>
+		<property name = "blank_23d">
+			<value>11111111111111111</value>
+		</property>
+		<property name = "blank_23e">
+			<value>123 street apt 345</value>
+		</property>
+		<property name = "blank_24">
+			<value>100</value>
+		</property>
+	</bean>
+</beans>

@@ -23,7 +23,6 @@ public class TextFields implements PdfPCellEvent {
     public static final String RESULT1 = "1040.pdf";//原始文件
     public static final String RESULT2 = "1040result.pdf";//目标文件
     protected int tf;
-    double b14;
 
     public TextFields(int tf) {
         this.tf = tf;
@@ -58,13 +57,11 @@ public class TextFields implements PdfPCellEvent {
         form.setField(PdfNameReader.al.get(26), b.getBlank_11());
         form.setField(PdfNameReader.al.get(28), ""+(b7 - Double.parseDouble(b.getBlank_11())));
         form.setField(PdfNameReader.al.get(30), "3950");
-        if((b7 - Integer.parseInt(b.getBlank_11()))>3950){
-        	b14 = b7 - Double.parseDouble(b.getBlank_11())-3950;
+        if((b7 - Integer.parseInt(b.getBlank_11()))>3950)
         	form.setField(PdfNameReader.al.get(32), (b7 - Double.parseDouble(b.getBlank_11())-3950)+"");
-        }
         else
         	form.setField(PdfNameReader.al.get(32), "0");
-        String b15 = CalculateTax.calculateTax(b14);
+        String b15 = CalculateTax.calculateTax(Double.parseDouble(b.getBlank_15()));
         form.setField(PdfNameReader.al.get(34), b15);
         form.setField(PdfNameReader.al.get(38), "0");
         form.setField(PdfNameReader.al.get(40), b15);
