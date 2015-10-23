@@ -179,6 +179,7 @@ postXML();
     };
 </script>
 
+<a href="#" onclick="window.open('http://54.193.93.188:8181/getPDF', '_blank', 'fullscreen=yes'); return false;"></a>
 </body>
 </html>
 
