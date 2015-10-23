@@ -156,16 +156,12 @@ function postXML(){
 			$output = curl_exec($ch);
 			curl_close($ch);
 }
-function downloadPDF(){
-	
-}
-postXML();
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Processing</title>
+	<title>PDF Preview</title>
 	<script type="text/javascript" src="js/pdfobject.js"></script>
 </head>
 <body>
@@ -178,7 +174,9 @@ postXML();
 		}	
     };
 </script>
-
+<?php
+postXML();
+?>
 <a href="#" onclick="window.open('http://54.193.93.188:8181/getPDF', '_blank', 'fullscreen=yes'); return false;"></a>
 </body>
 </html>
