@@ -16,6 +16,11 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript">
+      function download(){
+        window.open("http://54.193.93.188:8181/getPDF");
+      }
+    </script>
 
 <form class="form-horizontal" action="xml_parser.php" method="POST" target="_blank">
 
@@ -200,7 +205,7 @@
 <div class="form-group">
 <label class="col-md-4 control-label" for="textinput"></label>
   <div class="col-md-5">
-    <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+    <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary" onclick="download()">Submit</button>
   </div>
 </div>
 
