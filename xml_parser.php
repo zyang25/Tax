@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="refresh" content="0;URL=/home/ec2-user/Tax/1040result.pdf" />
-	<title>Processing</title>
-</head>
-<body>
-
-</body>
-</html>
-
 <?php
 $myfile = fopen("newbeans.xml", "w") or die("Unable to open file!");
 
@@ -157,7 +146,7 @@ function xml(){
 }
 function postXML(){
 			$xmldata = xml();
-			$ch = curl_init('http://localhost:8181/test');
+			$ch = curl_init('http://localhost:8080/test');
 			curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 			curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 			curl_setopt($ch, CURLOPT_POST, 1);
@@ -171,6 +160,26 @@ function downloadPDF(){
 	
 }
 postXML();
-
-
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Processing</title>
+	<script type="text/javascript" src="js/pdfobject.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+    window.onload = function (){
+      var myPDF = new PDFObject({ url: "http://54.193.93.188:8181/getPDF" }).embed();
+      if(myPDF){
+  			//do something
+		}	
+    };
+</script>
+
+</body>
+</html>
+
+
